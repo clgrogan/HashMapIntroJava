@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class KeyValues {
@@ -8,9 +9,15 @@ public class KeyValues {
 
         HashMap<String, Double> itemsHashMap = new HashMap<String, Double>();
 
-        for (int i = 0; i < prices.length; i++) {
+        System.out.println("\nHashMap Intro.\nUsing the below arrays to create a HashMap table.");
+        System.out.println("\tKey table:   " + Arrays.toString(vegetables));
+        System.out.println("\tValue table: " + Arrays.toString(prices));
+        for (int i = 0; i < prices.length; i++)
             itemsHashMap.put(vegetables[i], prices[i]);
-        }
+
+        System.out.println("Iterate to populate the HashMap with key/values from tables:");
+        System.out.println("\tfor (int i = 0; i < prices.length; i++)"
+                + "\n\titemsHashMap.put(vegetables[i], prices[i]);");
 
         System.out.println("\nGet the hashmap values by key which is the name of the item in this case:");
         System.out.println("itemsHashMap.get(\"Cauliflower\")" + itemsHashMap.get("Cauliflower"));
@@ -18,9 +25,9 @@ public class KeyValues {
         System.out.println("itemsHashMap.get(\"Parsley\")" + itemsHashMap.get("Parsley"));
 
         System.out.println("\nUse the HashMap forEach() method to return the key and values for each item.");
-        System.out.println("\titemsHashMap.forEach((key, value) -> {...}");
+        System.out.println("  itemsHashMap.forEach((key, value) -> {...}");
         itemsHashMap.forEach((key, value) -> {
-            System.out.println("\t\tKey: " + key + " Value: " + value);
+            System.out.println("\tKey: " + key + " Value: " + value);
         });
         System.out.println("\nWe can update existing key values with put, and add more."
                 + "\n We'll update parsley and add a couple more items.");
@@ -34,7 +41,7 @@ public class KeyValues {
         System.out.println("\nUse the HashMap forEach() method to return the key and values for each item.");
         System.out.println("  itemsHashMap.forEach((key, value) -> {...}");
         itemsHashMap.forEach((key, value) -> {
-            System.out.println("\t\tKey: " + key + " Value: " + value);
+            System.out.println("\tKey: " + key + " Value: " + value);
         });
         System.out.println(
                 "\nNote that the items may not appear in the same order with each run as"
