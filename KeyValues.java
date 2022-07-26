@@ -15,7 +15,7 @@ public class KeyValues {
         for (int i = 0; i < prices.length; i++)
             itemsHashMap.put(vegetables[i], prices[i]);
 
-        System.out.println("Iterate to populate the HashMap with key/values from tables:");
+        System.out.println("Iterate to populate the HashMap with key/value pairs from tables:");
         System.out.println("\tfor (int i = 0; i < prices.length; i++)"
                 + "\n\titemsHashMap.put(vegetables[i], prices[i]);");
 
